@@ -80,8 +80,8 @@ def main():
     except KeyboardInterrupt:
         logging.info("File watcher stopped.")
         observer.stop()
-
-    observer.join()
+    finally:
+        observer.join()
 
 if __name__ == "__main__":
     main()
